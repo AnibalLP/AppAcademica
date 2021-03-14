@@ -1,11 +1,11 @@
 <?php
 $pass='';
 $user='root';
-$nombredb='db_academica';
+$nombredb='db_academico';
 try {
     $db=new PDO(
         'mysql:host=localhost;
-        dbnombre='.$nombredb,
+        dbname='.$nombredb,
         $user,
         $pass
     );
