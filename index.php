@@ -28,7 +28,9 @@ $alumnos=$sentencia->fetchAll(PDO::FETCH_OBJ);
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-        <a class="nav-link" href="docentes.php">Features</a>
+        <a class="nav-link" href="docentes.php">Docentes</a>
+        <a class="nav-link" href="materias.php">Materias</a>
+        <a class="nav-link" href="matricula.php">Matricula</a>
        
       </div>
     </div>
