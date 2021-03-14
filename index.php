@@ -15,10 +15,14 @@ $alumnos=$sentencia->fetchAll(PDO::FETCH_OBJ);
 </head>
 
 <body>
-    <div class="tabla">
+
+<hr>
+<section>
+<div>
         <h1>Sistema Academico</h1>
         <table>
             <tr>
+          
                 <td>codigo</td>
                 <td>nombre</td>
                 <td>direccion</td>
@@ -30,13 +34,13 @@ $alumnos=$sentencia->fetchAll(PDO::FETCH_OBJ);
                     foreach ($alumnos as $datos) {
                         ?>
             <tr>
-                <td><?php echo $datos->idAlumno;?></td>
+               
                 <td><?php echo $datos->codigo;?></td>
                 <td><?php echo $datos->nombre;?></td>
                 <td><?php echo $datos->direccion;?></td>
                 <td><?php echo $datos->telefono;?></td>
-                <td><a href="editar.php?IdAlumno=<?php echo $datos->idAlumno;?>" >Editar</a></td>
-                <td><a href="eliminar.php">Eliminar</a></td>
+                <td><a href="editar.php?id=<?php echo $datos->idAlumno;?>" >Editar</a></td>
+                <td><a href="eliminar.php?id=<?php echo $datos->idAlumno;?>">Eliminar</a></td>
             </tr>
             <?php
         }
@@ -72,6 +76,8 @@ $alumnos=$sentencia->fetchAll(PDO::FETCH_OBJ);
             </table>
         </form>
     </div>
+</section>
+   
 </body>
 
 </html>
