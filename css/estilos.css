@@ -1,0 +1,25 @@
+body {
+    background: violet;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+}
+
+div {
+    background: beige;
+}
+
+table {
+    background-color: darkseagreen;
+}
+
+td {
+    padding: 10px;
+}
+
+tr {
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}

@@ -5,16 +5,14 @@ if (!isset($_POST['oculto'])) {
 include 'model/conexion.php';
 $codigo=$_POST['tcodigo'];
 $nombre=$_POST['tnombre'];
-$direccion=$_POST['tdireccion'];
-$telefono=$_POST['ttelefono'];
-$dui=$_POST['tdui'];
-$nit=$_POST['tnit'];
 
-$sentencia=$db->prepare("insert into docentes(codigo,nombre,direccion,telefono,dui,nit) values(?,?,?,?,?,?);");
-$resultado=$sentencia->execute([$codigo,$nombre,$direccion,$telefono,$dui,$nit]);
+
+
+$sentencia=$db->prepare("insert into materias(codigo,nombre) values(?,?);");
+$resultado=$sentencia->execute([$codigo,$nombre]);
 if ($resultado===true) {
     //echo "insertado correctamente";
-    header('location:docentes.php');
+    header('location:materias.php');
 }
 else {
     echo "datos no agregados";

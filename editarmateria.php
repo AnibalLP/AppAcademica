@@ -1,6 +1,6 @@
 <?php
 if (!isset($_GET['id'])) {
-    header('location:docentes.php');
+    header('location:materias.php');
 }
 include 'model/conexion.php';
 $id=$_GET['id'];
@@ -21,8 +21,8 @@ $persona=$sentencia->fetch(PDO::FETCH_OBJ);
 
 <body>
     <div>
-        <h3>Modificar Docentes</h3>
-        <form method="POST" action="editarprocesodocente.php">
+        <h3>Modificar Materias</h3>
+        <form method="POST" action="editarmateriaproceso.php">
             <table>
                 <tr>
                     <td>Codigo</td>
@@ -33,24 +33,8 @@ $persona=$sentencia->fetch(PDO::FETCH_OBJ);
                     <td><input type="text" name="tnombre" value="<?php echo $persona->nombre;?>"></td>
                 </tr>
                 <tr>
-                    <td>Direccion</td>
-                    <td><input type="text" name="tdireccion" value="<?php echo $persona->direccion;?>"></td>
-                </tr>
-                <tr>
-                    <td>Telefono</td>
-                    <td><input type="text" name="ttelefono" value="<?php echo $persona->telefono;?>"></td>
-                </tr>
-                <tr>
-                    <td>Dui</td>
-                    <td><input type="text" name="tdui" value="<?php echo $persona->dui;?>"></td>
-                </tr>
-                <tr>
-                    <td>Nit</td>
-                    <td><input type="text" name="tnit" value="<?php echo $persona->nit;?>"></td>
-                </tr>
-                <tr>
                     <input type="hidden" name="oculto">
-                    <input type="hidden" name="id2" value="<?php echo $persona->iddocente; ?>">
+                    <input type="hidden" name="id2" value="<?php echo $persona->idmaterias; ?>">
                     <td colspan=2><input type="submit" value="Modificar"></td>
                 </tr>
             </table>
